@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced To-Do List App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.2/main.min.css" integrity="sha512-/5x1a2gDjQxR38nXU1yPvBdShOb62k9jASgl6e4J39jR0j6p0N4LFbnl3CxU2y8+5MOqiQ9s4PyT6+cLwrU3Aw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="tabs">
+            <button id="list-view" class="active">List View</button>
+            <button id="calendar-view">Calendar View</button>
+        </div>
+        <div id="list-tab">
+            <form id="todo-form">
+                <input type="text" id="new-todo" placeholder="Enter a new to-do item">
+                <input type="date" id="due-date">
+                <select id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button type="submit">Add</button>
+            </form>
+            <div class="filters">
+                <button id="filter-all" class="active">All</button>
+                <button id="filter-active">Active</button>
+                <button id="filter-completed">Completed</button>
+                <button id="clear-completed">Clear Completed</button>
+            </div>
+            <div class="sorting">
+                <button id="sort-date">Sort by Due Date</button>
+                <button id="sort-priority">Sort by Priority</button>
+            </div>
+            <ul id="todo-list"></ul>
+        </div>
+        <div id="calendar-tab" style="display: none;">
+            <div id="calendar"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.2/main.min.js" integrity="sha512-u3WxCS2l61evPMP11xGLlL3AX9H/OB/FkB2mdEwi+PsSvmguVuukMjqelECmYo7z4F+rgTPvoWxptS3v0tyI1Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
